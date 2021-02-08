@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "cbeb8f81-c731-411e-97f7-5687ad44581a",
+		"name": "Prueba Accenture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"NombrePrueba1\",\r\n    \"apellido\": \"ApellidoPrueba1\",\r\n    \"direccion\": \"Carrera 11 # 14-08\",\r\n    \"cedula\": 12345\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/cliente/crearUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente",
+						"crearUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"nombre\": \"monitor gammer\",\r\n    \"precio\":  5465464\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/producto/crearProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"producto",
+						"crearProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "producto/ver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/producto/ver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"producto",
+						"ver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente/ver",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/cliente/ver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente",
+						"ver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearFactura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCliente\": 12345,\r\n    \"productos\": [\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Teclado gammer\",\r\n            \"precio\": 54654\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"nombre\": \"monitor gammer\",\r\n            \"precio\": 5465464\r\n        }\r\n    ],\r\n    \"descripcion\": \"asdfasdfasdfasdfasdfasdfasdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/factura/crearFactura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"factura",
+						"crearFactura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "factura/ver",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/factura/ver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"factura",
+						"ver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarFactura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCliente\": 12345,\r\n    \"productos\": [\r\n        {\r\n            \"id\": 3,\r\n            \"nombre\": \"Teclado gammer\",\r\n            \"precio\": 54654\r\n        }\r\n    ],\r\n    \"descripcion\": \"asdfasdfasdfasdfasdfasdfasdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/cliente/facturaFactura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente",
+						"facturaFactura"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarFactura",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/factura/eliminarFactura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"factura",
+						"eliminarFactura"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
